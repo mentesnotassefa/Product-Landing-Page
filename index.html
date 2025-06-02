@@ -1,133 +1,152 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRACE School</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Baskervville|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <link
-    href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-  />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
 </head>
-<body>
+<body class="font-sans bg-gray-100">
     <main>
-        <p id="AD"></p>
-        <header id="header">
-            <nav  id="nav-bar">
-                <div class="img1" >
-                    <a href="#FSR" ><img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012020/kgk-logo-pantone-v_lock-01.png?zy4xncVPhQGsD7GxBYFZbCrTqAq5NLr9&itok=FboooSWw" alt="School icon" id="header-img"></a>
+        <header id="header" class="bg-white shadow-md fixed w-full top-0 z-20">
+            <nav id="nav-bar" class="container mx-auto flex items-center justify-between p-4">
+                <div class="img1">
+                    <a href="#FSR">
+                        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012020/kgk-logo-pantone-v_lock-01.png?zy4xncVPhQGsD7GxBYFZbCrTqAq5NLr9&itok=FboooSWw" alt="School icon" id="header-img" class="h-12">
+                    </a>
                 </div>
-                <ul class="tu">
-                    <li class="tl"><a href="#Features" class="nav-link">Features</a></li>
-                    <li class="tl"><a href="#vd" class="nav-link">Indoor/Outdoor</a></li>
-                    <li class="tl"><a href="#PRS" class="nav-link">Pricing</a></li>
-                    <li class="tl"><a href="#AT" class="nav-link">About</a></li>
+                <button class="hamburger text-2xl md:hidden focus:outline-none" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu tu flex space-x-6 md:space-x-8 text-lg font-raleway">
+                    <li class="tl"><a href="#Features" class="nav-link hover:text-blue-600">Features</a></li>
+                    <li class="tl"><a href="#vd" class="nav-link hover:text-blue-600">Indoor/Outdoor</a></li>
+                    <li class="tl"><a href="#PRS" class="nav-link hover:text-blue-600">Pricing</a></li>
+                    <li class="tl"><a href="#AT" class="nav-link hover:text-blue-600">About</a></li>
                 </ul>
             </nav>
-
         </header>
-        <div id="FSR"   >
-            <form action="https://www.freecodecamp.com/email-submit" id="form"  >
-            <label for="email" > Friends School Register <br><input  type="email" id="email" name="email" placeholder="Enter Your Email"></label><br>
-            <input class="button button1" id="submit" type="submit" value="Get Started">
-        </form>
-    </div>
-        
-    <div id="Features">
-        <section class="f"  >
-            <h1 class="f1" ><i class="fas fa-users"></i>Play-Based Learning </h1>
-            <p class="f2">A strong focus on play-based learning, allowing children to learn through exploration, discovery, and hands-on activities.</p><br>
-        
-            <h1 class="f1"><i class="fas fa-pen-nib" ></i>Holistic Development </h1>
-            <p class="f2">Addressing all aspects of child development, including cognitive, social-emotional, physical, and creative.</p><br>
-        
-            <h1 class="f1"><i class="fas fa-user" ></i>Age-Appropriate Curriculum</h1>
-            <p class="f2">A curriculum tailored to the specific developmental needs and interests of kindergarten-aged children.</p><br>
-        
-            <h1 class="f1"><i class="fas fa-bolt" ></i> Language Development </h1>
-            <p class="f2">Supporting language acquisition and literacy through storytelling, songs, and interactive activities.</p>
-        
+
+        <div id="FSR" class="container mx-auto pt-24 pb-12 text-center">
+            <form action="https://www.freecodecamp.com/email-submit" id="form" class="flex flex-col items-center space-y-4">
+                <label for="email" class="text-xl font-bold font-anton">Friends School Register</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" class="border rounded-lg p-2 w-full max-w-md" required aria-required="true">
+                <input type="submit" value="Get Started" class="button bg-blue-600 text-white rounded-lg p-2 w-full max-w-md hover:bg-blue-700" id="submit-form">
+            </form>
+        </div>
+
+        <div id="Features" class="container mx-auto py-12">
+            <section class="f space-y-8">
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-users text-3xl text-blue-600"></i>
+                    <div>
+                        <h1 class="f1 text-2xl font-bold font-anton">Play-Based Learning</h1>
+                        <p class="f2 text-gray-700">A strong focus on play-based learning, allowing children to learn through exploration, discovery, and hands-on activities.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-pen-nib text-3xl text-blue-600"></i>
+                    <div>
+                        <h1 class="f1 text-2xl font-bold font-anton">Holistic Development</h1>
+                        <p class="f2 text-gray-700">Addressing all aspects of child development, including cognitive, social-emotional, physical, and creative.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-user text-3xl text-blue-600"></i>
+                    <div>
+                        <h1 class="f1 text-2xl font-bold font-anton">Age-Appropriate Curriculum</h1>
+                        <p class="f2 text-gray-700">A curriculum tailored to the specific developmental needs and interests of kindergarten-aged children.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-bolt text-3xl text-blue-600"></i>
+                    <div>
+                        <h1 class="f1 text-2xl font-bold font-anton">Language Development</h1>
+                        <p class="f2 text-gray-700">Supporting language acquisition and literacy through storytelling, songs, and interactive activities.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="v container mx-auto py-12" id="vd">
+            <div class="relative w-full" style="padding-bottom: 56.25%;">
+                <iframe id="video" class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/GsjVooKHqVo?si=N7fPacYJkM3WZ9qi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
-    </div>
 
-<section class="v" id="vd">
-    <iframe id="video"  width="560" height="315" src="https://www.youtube.com/embed/GsjVooKHqVo?si=N7fPacYJkM3WZ9qi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</section>
+        <div class="pr container mx-auto py-12" id="PRS">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="co bg-white p-6 rounded-lg shadow-md text-center">
+                    <h1 class="level text-2xl font-bold font-anton">Kg1 Class</h1>
+                    <p class="price text-xl font-bold text-blue-600">$1500</p>
+                    <div class="s space-y-2">
+                        <p class="service">Registration</p>
+                        <p class="service">Books</p>
+                        <p class="service">One Month fee</p>
+                        <p class="service">Transportation</p>
+                    </div>
+                    <input type="submit" value="Select" class="button bg-blue-600 text-white rounded-lg p-2 mt-4 w-full hover:bg-blue-700" id="submit-kg1">
+                </div>
+                <div class="co bg-white p-6 rounded-lg shadow-md text-center">
+                    <h1 class="level text-2xl font-bold font-anton">Kg2 Class</h1>
+                    <p class="price text-xl font-bold text-blue-600">$2000</p>
+                    <div class="s space-y-2">
+                        <p class="service">Registration</p>
+                        <p class="service">Books</p>
+                        <p class="service">One Month fee</p>
+                        <p class="service">Transportation</p>
+                    </div>
+                    <input type="submit" value="Select" class="button bg-blue-600 text-white rounded-lg p-2 mt-4 w-full hover:bg-blue-700" id="submit-kg2">
+                </div>
+                <div class="co bg-white p-6 rounded-lg shadow-md text-center">
+                    <h1 class="level text-2xl font-bold font-anton">Kg3 Class</h1>
+                    <p class="price text-xl font-bold text-blue-600">$2500</p>
+                    <div class="s space-y-2">
+                        <p class="service">Registration</p>
+                        <p class="service">Books</p>
+                        <p class="service">One Month fee</p>
+                        <p class="service">Transportation</p>
+                    </div>
+                    <input type="submit" value="Select" class="button bg-blue-600 text-white rounded-lg p-2 mt-4 w-full hover:bg-blue-700" id="submit-kg3">
+                </div>
+                <div class="co bg-white p-6 rounded-lg shadow-md text-center">
+                    <h1 class="level text-2xl font-bold font-anton">Day Care</h1>
+                    <p class="price text-xl font-bold text-blue-600">$3000</p>
+                    <div class="s space-y-2">
+                        <p class="service">Registration</p>
+                        <p class="service">Food</p>
+                        <p class="service">One Month fee</p>
+                        <p class="service">Sanitary Supply</p>
+                    </div>
+                    <input type="submit" value="Select" class="button bg-blue-600 text-white rounded-lg p-2 mt-4 w-full hover:bg-blue-700" id="submit-daycare">
+                </div>
+            </div>
+        </div>
 
-<div class="pr" id="PRS">
-    <div class="co">
-        <h1 class="level">Kg1 Class</h1>
-        <p class="price">$1500</p>
-        <p class="s">
-            <p class="service">Registration</p>
-            <p class="service">Books</p>
-            <p class="service">One Month fee</p>
-            <p class="service">Transportation</p>
-        </p>
-        <input id="submit" type="submit" value="select"  class="button">
-       
-    </div>
-    <div class="co">
-        <h1 class="level">Kg2 Class</h1>
-        <p class="price">$2000</p>
-        <p class="s">
-            <p class="service">Registration</p>
-            <p class="service">Books</p>
-            <p class="service">One Month fee</p>
-            <p class="service">Transportation</p>
-        </p>
-        <input id="submit" type="submit" value="select"  class="button">
-       
-    </div>
-    <div class="co">
-        <h1 class="level">Kg3 Class</h1>
-        <p class="price">$2500</p>
-        <p class="s">
-            <p class="service">Registration</p>
-            <p class="service">Books</p>
-            <p class="service">One Month fee</p>
-            <p class="service">Transportation</p>
-        </p>
-        <input id="submit" type="submit" value="select"  class="button">
-       
-    </div>
-    <div class="co">
-        <h1 class="level">Day Care</h1>
-        <p class="price">$3000</p>
-        <p class="s">
-            <p class="service">Registration</p>
-            <p class="service">Food</p>
-            <p class="service">One Month fee</p>
-            <p class="service">Sanitary Supply</p>
-        </p>
-        <input id="submit" type="submit" value="select"  class="button">
-        
-    </div>
-
-
-
-</div>
-<footer>
-    <div class="foo" id="AT">
-        <p class="fo2">
-        <p class="fo1"><a href="#AD" class="o1">Contact</a></p>
-        <p class="fo1"><a href="#AD" class="o1">Privacy</a></p>
-        <p class="fo1"><a href="#AD" class="o1">Terms</a></p>
-        </p>
-        
-        
-    </div>
-    <div class="fdd">
-        <p class="fdd1">Developed By Mentesnot</p>
-    </div>
-    
-   
-</footer>
+        <footer class="bg-gray-800 text-white py-6">
+            <div class="foo container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <div class="fo2 flex space-x-6">
+                    <p class="fo1"><a href="#AD" class="o1 hover:text-blue-400">Contact</a></p>
+                    <p class="fo1"><a href="#AD" class="o1 hover:text-blue-400">Privacy</a></p>
+                    <p class="fo1"><a href="#AD" class="o1 hover:text-blue-400">Terms</a></p>
+                </div>
+                <div class="fdd mt-4 md:mt-0">
+                    <p class="fdd1">Developed By Mentesnot</p>
+                </div>
+            </div>
+        </footer>
     </main>
+
+    <script>
+        // Hamburger menu toggle
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
